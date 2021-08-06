@@ -19,7 +19,7 @@ import * as proxyquire from 'proxyquire';
 import * as pfy from '@google-cloud/promisify';
 import {EventEmitter} from 'events';
 import {JobOptions} from '../src/job';
-import {ServiceObject, ServiceObjectConfig, util} from '@google-cloud/common';
+import {ServiceObject, ServiceObjectConfig, util} from '@deliveryhero/google-cloud-common';
 
 let promisified = false;
 
@@ -69,7 +69,7 @@ describe('BigQuery/Model', () => {
 
   before(() => {
     Model = proxyquire('../src/model.js', {
-      '@google-cloud/common': {
+      '@deliveryhero/google-cloud-common': {
         ServiceObject: FakeServiceObject,
         util: fakeUtil,
       },

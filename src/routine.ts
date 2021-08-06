@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import * as common from '@google-cloud/common';
+import * as common from '@deliveryhero/google-cloud-common';
 import {promisifyAll} from '@google-cloud/promisify';
 import extend = require('extend');
 

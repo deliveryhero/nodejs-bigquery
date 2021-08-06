@@ -18,7 +18,7 @@ import {
   ServiceConfig,
   ServiceOptions,
   util,
-} from '@google-cloud/common';
+} from '@deliveryhero/google-cloud-common';
 import * as pfy from '@google-cloud/promisify';
 import arrify = require('arrify');
 import * as assert from 'assert';
@@ -161,7 +161,7 @@ describe('BigQuery', () => {
       './table': {
         Table: FakeTable,
       },
-      '@google-cloud/common': {
+      '@deliveryhero/google-cloud-common': {
         Service: FakeService,
         util: fakeUtil,
       },

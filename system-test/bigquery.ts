@@ -12,11 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import {ApiError} from '@google-cloud/common';
+import {ApiError} from '@deliveryhero/google-cloud-common';
 import {
   DecorateRequestOptions,
   GoogleErrorBody,
-} from '@google-cloud/common/build/src/util';
+} from '@deliveryhero/google-cloud-common/build/src/util';
 import {Storage} from '@google-cloud/storage';
 import * as assert from 'assert';
 import {describe, it, before, after} from 'mocha';

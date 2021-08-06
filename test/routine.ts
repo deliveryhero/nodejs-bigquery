@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import {ServiceObject, ServiceObjectConfig, util} from '@google-cloud/common';
+import {ServiceObject, ServiceObjectConfig, util} from '@deliveryhero/google-cloud-common';
 import * as pfy from '@google-cloud/promisify';
 import * as assert from 'assert';
 import {describe, it, before, beforeEach} from 'mocha';
@@ -65,7 +65,7 @@ describe('BigQuery/Routine', () => {
 
   before(() => {
     Routine = proxyquire('../src/routine', {
-      '@google-cloud/common': {
+      '@deliveryhero/google-cloud-common': {
         ServiceObject: FakeServiceObject,
       },
       '@google-cloud/promisify': fakePfy,

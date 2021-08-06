@@ -17,7 +17,7 @@ import {
   ServiceObject,
   ServiceObjectConfig,
   util,
-} from '@google-cloud/common';
+} from '@deliveryhero/google-cloud-common';
 import * as pfy from '@google-cloud/promisify';
 import arrify = require('arrify');
 import * as assert from 'assert';
@@ -97,7 +97,7 @@ describe('BigQuery/Dataset', () => {
 
   before(() => {
     Dataset = proxyquire('../src/dataset', {
-      '@google-cloud/common': {
+      '@deliveryhero/google-cloud-common': {
         ServiceObject: FakeServiceObject,
       },
       '@google-cloud/paginator': fakePaginator,

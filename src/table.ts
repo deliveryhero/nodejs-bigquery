@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import * as common from '@google-cloud/common';
+import * as common from '@deliveryhero/google-cloud-common';
 import {paginator, ResourceStream} from '@google-cloud/paginator';
 import {promisifyAll} from '@google-cloud/promisify';
 import arrify = require('arrify');
@@ -40,7 +40,7 @@ import {
   JobRequest,
   PagedRequest,
 } from '.';
-import {GoogleErrorBody} from '@google-cloud/common/build/src/util';
+import {GoogleErrorBody} from '@deliveryhero/google-cloud-common/build/src/util';
 import {Duplex, Writable} from 'stream';
 import {JobMetadata} from './job';
 import bigquery from './types';

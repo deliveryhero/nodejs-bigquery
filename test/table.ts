@@ -17,8 +17,8 @@ import {
   ServiceObject,
   ServiceObjectConfig,
   util,
-} from '@google-cloud/common';
-import {GoogleErrorBody} from '@google-cloud/common/build/src/util';
+} from '@deliveryhero/google-cloud-common';
+import {GoogleErrorBody} from '@deliveryhero/google-cloud-common/build/src/util';
 import * as pfy from '@google-cloud/promisify';
 import {File} from '@google-cloud/storage';
 import arrify = require('arrify');
@@ -131,7 +131,7 @@ describe('BigQuery/Table', () => {
   before(() => {
     Table = proxyquire('../src/table.js', {
       uuid: fakeUuid,
-      '@google-cloud/common': {
+      '@deliveryhero/google-cloud-common': {
         ServiceObject: FakeServiceObject,
         util: fakeUtil,
       },

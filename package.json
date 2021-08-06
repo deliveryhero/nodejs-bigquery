@@ -1,7 +1,7 @@
 {
   "name": "@deliveryhero/google-cloud-bigquery",
   "description": "Google BigQuery Client Library for Node.js",
-  "version": "5.8.0",
+  "version": "5.8.1",
   "license": "Apache-2.0",
   "author": "Google LLC",
   "engines": {
@@ -52,7 +52,6 @@
   },
   "dependencies": {
     "@deliveryhero/google-cloud-common": "^3.8.0",
-    "@google-cloud/common": "^3.1.0",
     "@google-cloud/paginator": "^3.0.0",
     "@google-cloud/promisify": "^2.0.0",
     "arrify": "^2.0.1",

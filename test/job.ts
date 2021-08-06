@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import {DecorateRequestOptions, util} from '@google-cloud/common';
+import {DecorateRequestOptions, util} from '@deliveryhero/google-cloud-common';
 import * as pfy from '@google-cloud/promisify';
 import arrify = require('arrify');
 import * as assert from 'assert';
@@ -89,7 +89,7 @@ describe('BigQuery/Job', () => {
 
   before(() => {
     Job = proxyquire('../src/job.js', {
-      '@google-cloud/common': {Operation: FakeOperation},
+      '@deliveryhero/google-cloud-common': {Operation: FakeOperation},
       '@google-cloud/paginator': fakePaginator,
       '@google-cloud/promisify': fakePfy,
     }).Job;
