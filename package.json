@@ -1,13 +1,16 @@
 {
-  "name": "@google-cloud/bigquery",
+  "name": "@deliveryhero/google-cloud-bigquery",
   "description": "Google BigQuery Client Library for Node.js",
-  "version": "5.7.0",
+  "version": "5.8.0",
   "license": "Apache-2.0",
   "author": "Google LLC",
   "engines": {
     "node": ">=10"
   },
-  "repository": "googleapis/nodejs-bigquery",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": "deliveryhero/nodejs-bigquery",
   "main": "./build/src/index.js",
   "types": "./build/src/index.d.ts",
   "files": [
@@ -48,6 +51,7 @@
     "precompile": "gts clean"
   },
   "dependencies": {
+    "@deliveryhero/google-cloud-common": "^3.8.0",
     "@google-cloud/common": "^3.1.0",
     "@google-cloud/paginator": "^3.0.0",
     "@google-cloud/promisify": "^2.0.0",

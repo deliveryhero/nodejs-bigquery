@@ -955,6 +955,26 @@ export class BigQuery extends common.Service {
   }
 
   /**
+   * Set static short-lived access token to auth client directly.
+   *
+   * @private
+   *
+   * @throws {error} If client is not set.
+   *
+   * @param {string} accessToken access token to set in the client.
+   * @returns {void}.
+   */
+  setAuthAccessToken(accessToken: string): void {
+    if (this.authClient.cachedCredential) {
+      this.authClient.cachedCredential.setCredentials({
+        access_token: accessToken,
+      });
+    } else {
+      throw Error('Auth client for BigQuery is not set');
+    }
+  }
+
+  /**
    * Detect a value's type.
    *
    * @private
