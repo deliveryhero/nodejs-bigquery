@@ -12,3 +12,4 @@ system-test/*key.json
 __pycache__
 .vscode
 package-lock.json
+.idea/

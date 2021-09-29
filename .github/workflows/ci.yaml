@@ -10,6 +10,8 @@ jobs:
     strategy:
       matrix:
         node: [10, 12, 14, 15]
+    env:
+      GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -28,6 +30,8 @@ jobs:
           MOCHA_THROW_DEPRECATION: false
   windows:
     runs-on: windows-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -39,6 +43,8 @@ jobs:
           MOCHA_THROW_DEPRECATION: false
   lint:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -48,6 +54,8 @@ jobs:
       - run: npm run lint
   docs:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1

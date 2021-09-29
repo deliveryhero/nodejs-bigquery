@@ -19,7 +19,11 @@ import * as proxyquire from 'proxyquire';
 import * as pfy from '@google-cloud/promisify';
 import {EventEmitter} from 'events';
 import {JobOptions} from '../src/job';
-import {ServiceObject, ServiceObjectConfig, util} from '@deliveryhero/google-cloud-common';
+import {
+  ServiceObject,
+  ServiceObjectConfig,
+  util,
+} from '@deliveryhero/google-cloud-common';
 
 let promisified = false;
 
