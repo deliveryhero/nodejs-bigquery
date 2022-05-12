@@ -295,12 +295,6 @@ export class BigQuery extends common.Service {
     }
 
     super(config, options);
-    /**
-     * Load googleAuth Client so that auth library can set access_token
-     * here (https://github.com/deliveryhero/google-auth-library-nodejs/blob/c3d83f127f5c1c6c865af454b7224077bb9b1930/src/auth/googleauth.ts#L805)
-     * while initiliazing BQClient
-     */
-    this.authClient.getClient();
 
     /**
      * @name BigQuery#location
