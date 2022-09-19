@@ -288,6 +288,8 @@ export class BigQuery extends common.Service {
       baseUrl,
       scopes: ['https://www.googleapis.com/auth/bigquery'],
       packageJson: require('../../package.json'),
+      autoRetry: options.autoRetry,
+      maxRetries: options.maxRetries,
     };
 
     if (options.scopes) {
